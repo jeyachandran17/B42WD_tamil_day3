@@ -1,0 +1,158 @@
+//              Full stack devepment day3_task (JS)
+
+// 1. iterate over all for loops( for, for..in, for..of, forEach)
+
+// using for loop
+
+// source code :
+
+    var something ={
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"]
+    }
+    for(var i=0; i<something.qualification.length;i++)
+    {
+        console.log(something.qualification[i]);
+    }
+
+// output :
+
+    10th
+    12th
+    UG-computer science
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// using for..in
+
+// source code :
+   
+    var something ={
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"]
+    }
+    for(var data in something)
+    {
+        console.log(data, something[data]);
+    }
+
+// output:
+
+    Name jeyachandran c
+    age 22
+    gender male
+    qualification (3) ['10th', '12th', 'UG-computer science']
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+// using for..of
+
+// source code :
+
+    var something ={
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"]
+    }
+    for(var value of something.qualification)
+    {
+        console.log(value);
+    }
+
+// output :
+
+    10th
+    12th
+    UG-computer science
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+// using foreach
+
+// source code :
+
+    var something ={
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"]
+    }
+    Object.keys(something).forEach(function(sample) {
+    console.log(sample+" : " +something[sample]);
+    })
+
+// output :
+
+    Name : jeyachandran c
+    age : 22
+    gender : male
+    qualification : 10th,12th,UG-computer science
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+2. create your one resume data in JSON format
+
+source code : // method 1
+
+    var My_resume = {
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"],
+        "location":"theni",
+        "nationality":"india",
+        "languagesknown":["Tamil","English"],
+        "status":"single",
+        "hoby":"learn something & music"
+    }
+    console.log(My_resume);
+
+output :
+
+    {Name: 'jeyachandran c', age: '22', gender: 'male', qualification: Array(3), location: 'theni', …}
+    Name: "jeyachandran c"
+    age: "22"
+    gender: "male"
+    hoby: "learn something & music"
+    languagesknown: (2) ['Tamil', 'English']
+    location: "theni"
+    nationality: "india"
+    qualification:(3) ['10th', '12th', 'UG-computer science']
+    status:"single"
+
+//             ======================== or ================================  
+
+source code : // method 2 ( it's better than method 1 )
+
+    var My_resume = {
+        "Name":"jeyachandran c",
+        "age":"22",
+        "gender":"male",
+        "qualification":["10th","12th","UG-computer science"],
+        "location":"theni",
+        "nationality":"india",
+        "languagesknown":["Tamil","English"],
+        "status":"single",
+        "hoby":"learn something & music"
+    }
+    for(var i in My_resume)
+    {
+        console.log(i+" : "+My_resume[i]);
+    }
+
+output :
+
+    Name : jeyachandran c
+    age : 22
+    gender : male
+    qualification : 10th,12th,UG-computer science
+    location : theni
+    nationality : india
+    languagesknown : Tamil,English
+    status : single
+    hoby : learn something & music
+
